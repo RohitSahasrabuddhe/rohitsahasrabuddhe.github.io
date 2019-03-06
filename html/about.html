@@ -21,6 +21,9 @@
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133811309-1"></script>
+<!-- Chart.js inclusion for chart generation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -83,7 +86,9 @@
         I have used all of the above technologies at least once.</p>
       
       
-       <!-- Chart Addition --> 
+       <!-- Chart Addition start--> 
+       <canvas id="myChart"></canvas>
+       <!-- Chart Addition ends-->
 
       <p><br><br>List of Projects:
       <ul style="font-size:18px">
@@ -144,5 +149,59 @@
 <script src="../js/retina.min.js"></script> 
 <script src="../js/modernizr.js"></script> 
 <script src="../js/main.js"></script>
+
+<Script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'bar',
+    
+    // The data for profeciency dataset
+    data: {
+        labels: ["Java", "c", "JavaScript", "HTML", "CSS", "C#", "ASP.NET", "VB.NET"],
+        datasets: [{
+            label: "Profeciency Level",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [85, 40, 50, 55, 35, 25, 40, 60],
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+      responsive: true,
+                legend: {
+                    position: 'bottom',
+                },
+                hover: {
+                    mode: 'label'
+                },
+                scales: {
+                    xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Month'
+                            }
+                        }],
+                    yAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 100
+                            }
+                        }]
+                },
+                title: {
+                    display: true,
+                    text: 'Language Profeciency Chart'
+                }
+            
+        }
+    });
+</Script>
+
 </body>
 </html>
