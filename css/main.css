@@ -353,8 +353,8 @@ ul li {
   
   .work img.contain-img {
       object-fit: contain;
-      background-color: #fff; /* Ensures clean background if transparent */
-      padding: 40px; /* Adds breathing room so text isn't touching edges */
+      background-color: #232f3e; /* Amazon Squid Ink Dark Blue */
+      padding: 40px; 
       box-sizing: border-box;
   }
   .work .overlay {
