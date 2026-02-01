@@ -355,6 +355,7 @@ ul li {
       object-fit: contain;
       background-color: #fff; /* Ensures clean background if transparent */
       padding: 40px; /* Adds breathing room so text isn't touching edges */
+      box-sizing: border-box;
   }
   .work .overlay {
     background: rgba(64, 35, 97, 0.9);
